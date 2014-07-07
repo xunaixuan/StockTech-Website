@@ -1,0 +1,83 @@
+
+
+	<script language="javascript">
+		function changeColor(obj,color){
+			obj.bgColor = color ;
+		}
+	</script>
+	<script language="javascript">
+		var url = "/mldncase" ;
+	</script>
+	<script language="javascript" src="js/member_validate.js">
+	</script>
+<center> 
+<form action="regist_do.jsp" method="post" onSubmit="return validate(this)">
+<table border="1" width="100%" cellpadding="5" cellspacing="0" bgcolor="F2F2F2">
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td colspan="3">
+			<h1>注册新用户</h1>		</td>
+	</tr>
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td><font size="2">登录ＩＤ：</font></td>
+		<td><input type="text" name="mid" onBlur="validateMid(this.value)"></td>
+		<td><span id="mid_msg"><font color="RED">*</font></span></td>
+	</tr>
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td><font size="2">登录密码：</font></td>
+		<td><input type="password" name="password" onBlur="validatePassword(this.value)"></td>
+		<td><span id="password_msg"><font color="RED">*</font></span></td>
+	</tr>
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td><font size="2">确认密码：</font></td>
+		<td><input type="password" name="conf" onBlur="validateConf(this.value)"></td>
+		<td><span id="conf_msg"><font color="RED">*</font></span></td>
+	</tr>
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td><font size="2">地&nbsp;&nbsp;&nbsp;&nbsp;址：</font></td>
+		<td><input type="text" name="address" onBlur="validateAddress(this.value)"></td>
+		<td><span id="address_msg"><font color="RED">*</font></span></td>
+	</tr>
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td><font size="2">联系电话：</font></td>
+		<td><INPUT TYPE="text" NAME="telephone" onBlur="validateTelephone(this.value)"></td>
+		<td><span id="telephone_msg"><font color="RED">*</font></span></td>
+	</tr>
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td><font size="2">邮政编码：</font></td>
+		<td><input type="text" name="zipcode" onBlur="validateZipcode(this.value)"></td>
+		<td><span id="zipcode_msg"><font color="RED">*</font></span></td>
+	</tr>
+	<tr onMouseOver="changeColor(this,'white')" onMouseOut="changeColor(this,'F2F2F2')">
+		<td colspan="3">
+			<input type="submit" value="注册">
+			<input type="reset" value="重置">		</td>
+	</tr>
+</table>
+</center>
+
+<link href="/mldncase/style.css" rel="stylesheet" type="text/css" />
+<!--body end -->
+<br class="spacer" />
+</div>
+<!--bodyMain end -->
+<!--footer start -->
+<div id="footerMain">
+  <div id="footer"> 
+    <ul>
+      <li><a href="/mldncase/login.jsp">首页</a>|</li>
+      <li><a href="#">新闻</a>|</li>
+      <li><a href="/mldncase/front/product/product_list.jsp">产品</a>|</li>
+      <li><a href="#">组织结构</a>|</li>
+      <li><a href="/mldncase/front/product/product_cars.jsp">购物车</a>|</li>
+      <li><a href="#">成功案例</a>|</li>
+      <li><a href="#">企业优势</a>|</li>
+      <li><a href="#">联系我们</a>|</li>
+    </ul>
+    <p class="copyright">Copyright &copy; 北京魔乐科技软件学院</p>
+    <p class="design">Designed by : <a href="http://www.mldnjava.cn/" target="_blank" class="link">李兴华</a></p>
+    &nbsp; 
+  </div>
+</div>
+<!--footer end -->
+</body>
+</html>

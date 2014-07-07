@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <filter >
+     <filter-name>encoding</filter-name>
+     <filter-class>org.news.utils.CharacterEncodingFilter</filter-class>
+     <init-param>
+        <param-name>encoding</param-name>
+        <param-value>GBK</param-value>
+     </init-param>
+     <init-param>
+         <param-name>ignore</param-name>
+         <param-value>false</param-value>
+     </init-param>
+  </filter>
+  <filter-mapping>
+     <filter-name>encoding</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+	 <filter-name>adminlogin</filter-name>
+	 <filter-class>
+			org.news.utils.AdminLoginFilter
+	 </filter-class>
+  </filter>
+  <filter-mapping>
+		<filter-name>adminlogin</filter-name>
+		<url-pattern>/manage/admin/*</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>adminlogin</filter-name>
+		<url-pattern>/manage/index.htm</url-pattern>
+	</filter-mapping>
+  <servlet> 
+    <servlet-name>DeleteNewsInfo</servlet-name>
+    <servlet-class>org.news.servlet.DeleteNewsInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteNewsInfo</servlet-name>
+    <url-pattern>/manage/DeleteNewsInfo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <servlet-class>org.news.servlet.AdminLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLoginServlet</servlet-name>
+    <url-pattern>/manage/AdminLoginServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <servlet-class>org.news.servlet.AdminLogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <url-pattern>/manage/AdminLogoutServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>org.news.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/manage/admin/admin/AdminServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>NewsTypeServlet</servlet-name>
+    <servlet-class>org.news.servlet.NewsTypeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewsTypeServlet</servlet-name>
+    <url-pattern>/manage/admin/newstype/NewsTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>NewsInfoServlet</servlet-name>
+    <servlet-class>org.news.servlet.NewsInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserRegisterServlet</servlet-name>
+    <servlet-class>org.news.servlet.UserRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>org.news.servlet.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>org.news.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownloadAttachmentServlet</servlet-name>
+    <servlet-class>org.news.servlet.DownloadAttachmentServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SoftwareServlet</servlet-name>
+    <servlet-class>org.news.servlet.SoftwareServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>NewsInfoServlet</servlet-name>
+    <url-pattern>/manage/admin/newsinfo/NewsInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserRegisterServlet</servlet-name>
+    <url-pattern>/UserRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/UserLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/manage/admin/users/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadAttachmentServlet</servlet-name>
+    <url-pattern>/servlet/DownloadAttachmentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SoftwareServlet</servlet-name>
+    <url-pattern>/manage/SoftwareServlet</url-pattern>
+  </servlet-mapping>                          
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
